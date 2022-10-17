@@ -1,0 +1,99 @@
+body {
+    background-image: url('../IMG/consola-1300px-edit.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/*CSS del formulario*/
+fieldset {
+    background-color: rgb(20, 20, 20, 0.60);
+    border: none;
+    }
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 100px;
+}
+
+input {
+    opacity: 0.75;
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size:20px ;
+    margin-top: 25px;
+}
+
+.busqueda {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding-top:150px;
+    padding-bottom:100px;
+    align-content: center;
+}
+
+.form-titulo {
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+/*CSS del menú desplegable*/
+.opciones {
+    opacity: 0.75;
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size:20px ;
+    margin-top: 25px;
+}
+
+/*CSS slide*/
+.bpm {
+    display:inline-block;
+    width:50px;
+    }
+
+/*CSS del recuadro de resultados*/
+.devolucion {
+    background-color: rgb(20, 20, 20);
+    font-family: 'Trebuchet MS' sans-serif;
+    width: 100%;
+    min-height: 200px;
+    max-height: 600px;
+}
+
+/*CSS del recuadro de resultados y formulario en los breakpoints*/
+    @media only screen and (max-width: 600px) {
+    .devolucion { 
+            background-color: rgb(20,20,20); 
+             }
+    .item { 
+            flex-direction: column;
+            flex-wrap: wrap; 
+            align-self: center;
+            }
+        }
+
+    @media only screen and (min-width: 600px) {
+        .devolucion{ 
+            background-color: rgb(20,20,20); 
+             }
+    .item { 
+            flex-direction: column;
+            flex-wrap: wrap; 
+            align-self: center;
+            }
+        }
+    
+    @media only screen and (min-width: 1024px) {
+        .devolucion{ 
+        background-color: rgb(20,20,20); 
+         }
+    .item { 
+            flex-direction: row;
+            flex-wrap: wrap; 
+            align-self: center;
+            }
+        }

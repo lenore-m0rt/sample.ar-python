@@ -1,0 +1,29 @@
+.container {
+    background: rgb(20,20,20);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+        }
+
+.item {
+    font-family: Arial, Trebuchet, sans-serif;
+    font-size: 18px;
+    color: blanchedalmond;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-content: center;
+    }
+/*
+.item-1 {
+    color: white;
+    font-size: 24px;
+}
+*/
+

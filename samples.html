@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan">
+    <link rel="stylesheet" href="CSS/formularios.css">
+    <script src="JS/samples.js"></script>
+    <title>Formulario de samples</title>
+</head>
+
+<body onload="slider()">
+<div>
+    <form class="busqueda"> <!--Formulario de búsqueda-->
+        <h3 class="form-titulo">Buscador de samples</h3>
+        <fieldset>
+        <div class="content">
+
+            <div class="item">
+            <label for="genero">Género:</label>
+            <select name="genero" id="genero" class="opciones">
+                <option value="" selected>Todos</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="blues">Blues</option>
+                <option value="fx">FX</option>
+            </select>
+            </div>
+
+            <div class="item">
+                <label for="instrumento">Instrumento:</label>
+                <select name="instrumento" id="instrumento" class="opciones">
+                    <option value="" selected>Todos</option>
+                    <option value="guitarra">Guitarra</option>
+                    <option value="bateria">Batería</option>
+                    <option value="bajo">Bajo</option>
+                    <option value="fx">FX</option>
+                    <option value="otros">Otros</option>
+                </select>
+                </div>
+
+            <div class="item">
+                <label for="bpm">BPM</label>
+                <input type="range" min="30" max="300" value="120" class="slider" id="bpm">
+                <span id="bpm-val" class="bpm"></span>
+                <div>
+                    <label for="todos">Todos</label>
+                    <input type="checkbox" name="todos" id="todos" onclick="noBpm()">
+                </div>
+                <!--<input type="text" name="bpm" id="bpm"/> -->
+                </div>
+
+            <input type="button" value="Buscar" onclick="buscarSample()">
+       </div>
+
+    </fieldset>
+    </form>        
+   
+    <!--Recuadro de resultados-->
+    <iframe class="devolucion" id="resultados" src=""></iframe>
+</div>
+</body>
+
+<footer></footer>
+</html>
