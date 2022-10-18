@@ -84,3 +84,18 @@ audio {
         color: white;
         text-decoration: none;
     }
+
+/*CSS de la página de error*/
+
+.msj-error {
+    font-size: 100;
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    color: rgb(161, 161, 161);
+    text-align: center;
+}
+
+.lupa {
+    height: 200px;
+    width: auto;
+    align-content: center;
+}

@@ -1,11 +1,9 @@
-
-
 function slider() {
     var slider = document.getElementById("bpm");
     var output = document.getElementById("bpm-val");
-    output.innerHTML = slider.value; // Display the default slider value
+    output.innerHTML = slider.value; // Muestra el valor del slide por defecto
 
-    // Update the current slider value (each time you drag the slider handle)
+    // Actualiza el valor del slide cada vez que se corre el cursor
     slider.oninput = function() {
     output.innerHTML = this.value;
     }
@@ -18,6 +16,7 @@ function noBpm() {
 
     if (slider.disabled) {
         output.innerHTML='';
+        slider.value = '120';
     }
     else {
         output.innerHTML=slider.value;
@@ -25,6 +24,13 @@ function noBpm() {
 }
 
 function buscarSample() {
+    var bpm = document.getElementById("bpm");
+    var bpmVal = parseInt(bpm.value);
+    
+    if (bpmVal <= 100) {
+        document.getElementById('resultados').src ='error.html';
+        return true;
+    }
     document.getElementById('resultados').src ='resultado-sam.html';
     return true;
-}
+} 
