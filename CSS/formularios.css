@@ -32,7 +32,7 @@ input {
     font-family: 'League Spartan', Arial, Helvetica, sans-serif;
     font-size: 24px;
     padding-top:150px;
-    padding-bottom:100px;
+    padding-bottom:20px;
     align-content: center;
 }
 
@@ -57,18 +57,19 @@ input {
 
 /*CSS del recuadro de resultados*/
 .devolucion {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20, 0.80);
     font-family: 'Trebuchet MS' sans-serif;
     width: 100%;
-    min-height: 200px;
+    min-height: 300px;
     max-height: 600px;
+    border: none;
 }
 
 /*CSS del recuadro de resultados y formulario en los breakpoints*/
     @media only screen and (max-width: 600px) {
-    .devolucion { 
+    /*.devolucion { 
             background-color: rgb(20,20,20); 
-             }
+             }*/
     .item { 
             flex-direction: column;
             flex-wrap: wrap; 
@@ -77,9 +78,9 @@ input {
         }
 
     @media only screen and (min-width: 600px) {
-        .devolucion{ 
+        /*.devolucion{ 
             background-color: rgb(20,20,20); 
-             }
+             }*/
     .item { 
             flex-direction: column;
             flex-wrap: wrap; 
@@ -88,9 +89,9 @@ input {
         }
     
     @media only screen and (min-width: 1024px) {
-        .devolucion{ 
+        /*.devolucion{ 
         background-color: rgb(20,20,20); 
-         }
+         }*/
     .item { 
             flex-direction: row;
             flex-wrap: wrap; 

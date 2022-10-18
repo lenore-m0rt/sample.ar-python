@@ -23,3 +23,8 @@ function noBpm() {
         output.innerHTML=slider.value;
     }
 }
+
+function buscarSample() {
+    document.getElementById('resultados').src ='resultado-sam.html';
+    return true;
+}
