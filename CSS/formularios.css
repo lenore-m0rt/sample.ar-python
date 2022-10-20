@@ -1,5 +1,5 @@
 body {
-    background-image: url('../IMG/consola-1300px-edit.jpg');
+    background-image: url('../IMG/consola-edit.jpg');
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,3 +98,11 @@ input {
             align-self: center;
             }
         }
+
+/*CSS del footer*/
+
+p {
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 18px;
+}
