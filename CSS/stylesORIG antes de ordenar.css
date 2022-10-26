@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    background-image: url('../images/consola-1300px-edit.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+header.sticky{
+    padding: 5px 100px;
+    background: #141414;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 101px;
+    padding: 1.5em;
+    /* background-color: #141414; */
+    transition: 0.5s;
+    
+}
+
+
+.header-logo{
+    position: relative;
+    float: left;
+    width: 6em;
+    margin: 0.5rem;
+    text-decoration: none;
+    /* color: rgba(255, 255, 255, 1);    */
+}
+
+.header-nav{
+    padding: 1.5rem 3.5rem;
+    left: auto;
+    position: relative; 
+    top: auto;
+    width: auto;
+    float: right;
+    /* padding-left: 4em; */
+    /* display: inline-block; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    /* background-color: rgb(20, 20, 20, 0.60); */
+    border: none;
+    /* box-shadow: 0 0 0.5rem rgb(255, 255, 255 / 100%); */
+}
+
+.header-nav ul{
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    list-style: none;
+}
+
+.header-nav li{
+    float: left; 
+    font-weight: 700;
+    margin: 0 2.5rem 0;
+}
+
+.header-nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header-nav a:hover{
+    cursor: pointer;
+    color: rgb(133, 84, 206);
+    border-bottom: 2px solid rgb(133, 84, 206)
+}
+
+.header-nav li a{
+    font-size: 2.2rem;
+    background: transparent;
+}
+
+
+main{
+    min-height: 200px;
+    overflow: auto;
+}
+
+main>article{
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    width: 65%;
+}
+
+main>aside{
+    min-height: 180px;
+    min-width: 25%;
+    margin: 0.5rem;
+    float: left;
+    width: auto;
+}
+
+.hero{
+    padding-top: 6.5em;
+    flex-direction: row;
+    font-size: 3.5em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.hero h1{
+    padding-bottom: 20px;
+}
+
+#principal{
+    background-color: rgb(20, 20, 20, 0.60);
+    border: none;
+}
+
+#card-container{
+    font-size: 1.5em;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.card-title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.card{
+    text-align: center;
+    width: 25rem;
+    padding: 2rem;
+}
+
+.contacto-titulo{
+    padding-top: 6.5em;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* flex-direction: row; */
+    /* font-family: 'League Spartan', Arial, Helvetica, sans-serif; */
+    font-size: 45px;
+}
+
+.contacto{
+    color: rgba(255, 255, 255, 1);
+    /* font-family: 'League Spartan', Arial, Helvetica, sans-serif; */
+    font-size: 24px;
+    padding-top:20px;
+    padding-bottom:20px;
+    /* align-content: center; */
+}
+
+/*CSS del formulario*/
+fieldset {
+    /* background-color: rgb(20, 20, 20, 0.60); */
+    border: none;
+    }
+
+.content {
+    display: contents;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 100px;
+}
+
+input {
+    opacity: 0.75;
+    /* font-family: 'League Spartan', Arial, Helvetica, sans-serif; */
+    font-size:30px ;
+    margin-top: 25px;
+}
+
+/* footer{
+    border: 3px pink solid;
+} */

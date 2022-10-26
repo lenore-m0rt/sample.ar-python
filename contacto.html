@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Sample.ar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/app.js"></script>
+    <link rel="shortcut icon" href="icons/headphones-favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/90e1d5d566.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo"> <a href="index.html"> <img src="IMG/headphones-simple-solid-white.svg"
+                    alt="Logo de sample.ar"></a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="samples.html">Samples</a></li>
+                <li><a href="partituras.html">Partituras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <form name="formContacto" id="formContacto" class="content" method="POST">
+                <section class="contacto-titulo">
+                    <h3>Contactanos</h3>
+                    <fieldset>
+                        <div class="item">
+                            <!-- Con o sin placeholder? -->
+                            <label for="nombre">Nombre y apellido:</label>
+                            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Ingrese su nombre">
+                        </div>
+
+                        <div class="item">
+                            <!-- Con o sin placeholder? -->
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" name="correo" id="correo" maxlength="30"
+                                placeholder="Ingrese su correo">
+                        </div>
+
+                        <div class="item">
+                            <label for="asunto">Asunto:</label>
+                            <label for="samples">
+                                <input type="radio" name="asunto" id="samples">Samples
+                            </label>
+                            <label for="partituras">
+                                <input type="radio" name="asunto" id="partituras">Partituras
+                            </label>
+                            <label for="mix-master">
+                                <input type="radio" name="asunto" id="mix-master">Mezcla/Mastering
+                            </label>
+                        </div>
+
+                        <div class="item">
+                            <label for="mensaje">Mensaje (opcional):</label>
+                            <br>
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" maxlength="140"></textarea>
+                        </div>
+
+                        <input type="button" id="botonSub" value="Enviar" onclick="return enviaFormulario(this);">
+                    </fieldset>
+            </form>
+</body>
+<footer>
+    <p>&copy; Sample.ar 2022</p>
+    <a target="_blank" href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+    <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+</footer>
+
+</html>

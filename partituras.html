@@ -8,45 +8,62 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan">
     <link rel="stylesheet" href="CSS/formularios.css">
     <script src="JS/partituras.js"></script>
+    <script src="https://kit.fontawesome.com/90e1d5d566.js" crossorigin="anonymous"></script>
     <title>Formulario de partituras</title>
 </head>
 
 <body>
-<div>
-    <form class="busqueda"> <!--Formulario de búsqueda-->
-        <h3 class="form-titulo">Buscador de partituras</h3>
-        <fieldset>
-        <div class="content">
+    <header>
+        <div class="header-logo"><a href="index.html"><img src="IMG/headphones-simple-solid-white.svg"
+                    alt="Logo de sample.ar"></a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="samples.html">Samples</a></li>
+                <li><a href="partituras.html">Partituras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <form class="busqueda">
+            <!--Formulario de búsqueda-->
+            <h3 class="form-titulo">Buscador de partituras</h3>
+            <fieldset>
+                <div class="content">
 
-            <div class="item">
-            <label for="compositor">Compositor:</label>
-            <input type="text" name="compositor" id="compositor">
-            </div>
+                    <div class="item">
+                        <label for="compositor">Compositor:</label>
+                        <input type="text" name="compositor" id="compositor">
+                    </div>
 
-            <div class="item">
-            <label for="obra">Título de la obra:</label>
-            <input type="text" name="obra" id="obra"/> 
-            </div>
+                    <div class="item">
+                        <label for="obra">Título de la obra:</label>
+                        <input type="text" name="obra" id="obra" />
+                    </div>
 
-            <div class="item">
-            <input type="radio" name="estilo" id="instrumental" value="Instrumental">
-            <label for="instrumental">Instrumental</label>
-            <input type="radio" name="estilo" id="coral" value="coral">
-            <label for="coral">Coral</label>
-            </div>
+                    <div class="item">
+                        <input type="radio" name="estilo" id="instrumental" value="Instrumental">
+                        <label for="instrumental">Instrumental</label>
+                        <input type="radio" name="estilo" id="coral" value="coral">
+                        <label for="coral">Coral</label>
+                    </div>
 
-            <input type="button" value="Buscar" onclick="buscarPartitura()">
-       </div>
+                    <input type="button" value="Buscar" onclick="buscarPartitura()">
+                </div>
 
-    </fieldset>
-    </form>        
-   
-    <!--Recuadro de resultados-->
-    <iframe class="devolucion" id="resultados" src=""></iframe>
-</div>
+            </fieldset>
+        </form>
+
+        <!--Recuadro de resultados-->
+        <iframe class="devolucion" id="resultados" src=""></iframe>
+    </div>
 </body>
-
 <footer>
-    <p>© Sample.ar 2022</p>
+    <p>&copy; Sample.ar 2022</p>
+    <a target="_blank" href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+    <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
 </footer>
+
 </html>

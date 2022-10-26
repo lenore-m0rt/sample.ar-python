@@ -8,61 +8,79 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan">
     <link rel="stylesheet" href="CSS/formularios.css">
     <script src="JS/samples.js"></script>
+    <script src="https://kit.fontawesome.com/90e1d5d566.js" crossorigin="anonymous"></script>
     <title>Formulario de samples</title>
 </head>
 
 <body onload="slider()">
-<div>
-    <form class="busqueda"> <!--Formulario de búsqueda-->
-        <h3 class="form-titulo">Buscador de samples</h3>
-        <fieldset>
-        <div class="content">
+    <header>
+        <div class="header-logo"><a href="index.html"><img src="IMG/headphones-simple-solid-white.svg"
+                    alt="Logo de sample.ar"></a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="samples.html">Samples</a></li>
+                <li><a href="partituras.html">Partituras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <form class="busqueda">
+            <!--Formulario de búsqueda-->
+            <h3 class="form-titulo">Buscador de samples</h3>
+            <fieldset>
+                <div class="content">
 
-            <div class="item">
-            <label for="genero">Género:</label>
-            <select name="genero" id="genero" class="opciones">
-                <option value="" selected>Todos</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="blues">Blues</option>
-                <option value="fx">FX</option>
-            </select>
-            </div>
+                    <div class="item">
+                        <label for="genero">Género:</label>
+                        <select name="genero" id="genero" class="opciones">
+                            <option value="" selected>Todos</option>
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="blues">Blues</option>
+                            <option value="fx">FX</option>
+                        </select>
+                    </div>
 
-            <div class="item">
-                <label for="instrumento">Instrumento:</label>
-                <select name="instrumento" id="instrumento" class="opciones">
-                    <option value="" selected>Todos</option>
-                    <option value="guitarra">Guitarra</option>
-                    <option value="bateria">Batería</option>
-                    <option value="bajo">Bajo</option>
-                    <option value="fx">FX</option>
-                    <option value="otros">Otros</option>
-                </select>
+                    <div class="item">
+                        <label for="instrumento">Instrumento:</label>
+                        <select name="instrumento" id="instrumento" class="opciones">
+                            <option value="" selected>Todos</option>
+                            <option value="guitarra">Guitarra</option>
+                            <option value="bateria">Batería</option>
+                            <option value="bajo">Bajo</option>
+                            <option value="fx">FX</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="item">
+                        <label for="bpm">BPM</label>
+                        <input type="range" min="30" max="300" value="120" class="slider" id="bpm">
+                        <span id="bpm-val" class="bpm"></span>
+                        <div>
+                            <label for="todos">Todos</label>
+                            <input type="checkbox" name="todos" id="todos" onclick="noBpm()">
+                        </div>
+                    </div>
+
+                    <input type="button" value="Buscar" onclick="buscarSample()">
                 </div>
 
-            <div class="item">
-                <label for="bpm">BPM</label>
-                <input type="range" min="30" max="300" value="120" class="slider" id="bpm">
-                <span id="bpm-val" class="bpm"></span>
-                <div>
-                    <label for="todos">Todos</label>
-                    <input type="checkbox" name="todos" id="todos" onclick="noBpm()">
-                </div>
-            </div>
+            </fieldset>
+        </form>
 
-            <input type="button" value="Buscar" onclick="buscarSample()">
-       </div>
-
-    </fieldset>
-    </form>        
-   
-    <!--Recuadro de resultados-->
-    <iframe class="devolucion" id="resultados" src=""></iframe>
-</div>
+        <!--Recuadro de resultados-->
+        <iframe class="devolucion" id="resultados" src=""></iframe>
+    </div>
 </body>
 
 <footer>
-    <p>© Sample.ar 2022</p>
+    <p>&copy; Sample.ar 2022</p>
+    <a target="_blank" href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+    <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
 </footer>
+
 </html>

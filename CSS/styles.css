@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'League Spartan', sans-serif;
     color: rgba(255, 255, 255, 1);
@@ -65,7 +66,6 @@ header {
     color: rgba(255, 255, 255, 1);
 }
 
-
 .header-nav a:hover {
     cursor: pointer;
     color: #654f76;
@@ -73,12 +73,10 @@ header {
     transition: 0.4s;
 }
 
-
 .header-nav li a {
     font-size: 2.2rem;
     background: transparent;
-    }
-
+}
     /*breakpoints del header*/
     @media only screen and (max-width:600px) {  
         .header-nav li a {
@@ -109,118 +107,157 @@ header {
         }*/
         }
 
-
 header.sticky {
     padding: 5px 100px;
     background: #141414;
     z-index: 999;
+    
+    /* Alternativa con gradiente */
+    /* background: rgb(101,79,118);
+    background: linear-gradient(90deg, rgba(101,79,118,0.9251050762101716) 0%, rgba(20,20,20,0.8214636196275386) 50%); */
 }
 
-/*CSS del formulario*/
+/* CSS del Article del Main */
+main {
+    min-height: 200px;
+    overflow: auto;
+}
+
+main>article {
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    width: 65%;
+}
+
+.hero {
+    padding-top: 5.5em;
+    padding-bottom: 5em;
+    flex-direction: row;
+    font-size: 3em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    padding-bottom: 20px;
+}
+
+#card-container {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card {
+    text-align: center;
+    width: 25rem;
+    padding: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px 0 rgb(79, 64, 102);
+    transition: 0.5s;
+}
+
+
+/*  CSS del Aside  */
+main>aside {
+    min-height: 180px;
+    min-width: 25%;
+    margin: 0.5rem;
+    float: left;
+    width: auto;
+}
+
+.principal {
+    background-color: rgb(20, 20, 20, 0.60);
+    border: none;
+    width: 25rem;
+    padding: 2rem;
+    font-size: 1.5em;
+}
+
+
+iframe {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 14em;
+}
+
+/* Formulario de contacto */
+
+.contacto-titulo {
+    padding-top: 5em;
+    padding-bottom: 2em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+}
+
+.contacto {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 fieldset {
     background-color: rgb(20, 20, 20, 0.60);
     border: none;
-    }
+}
 
 .content {
-    display: flex;
+    display: contents;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
     height: 100px;
 }
 
-input {
-    opacity: 0.75;
-    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
-    font-size:20px ;
-    margin-top: 25px;
-}
-
-.busqueda {
-    color: rgba(255, 255, 255, 1);
-    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    padding-top:150px;
-    padding-bottom:20px;
-    align-content: center;
-}
-
-.form-titulo {
-    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
-    font-size: 45px;
-    padding-top: 2em;
-    /*padding-bottom: 1em;*/
-}
-
-/*CSS del menú desplegable*/
-.opciones {
-    opacity: 0.75;
-    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
-    font-size:20px ;
-    margin-top: 25px;
-}
-
-/*CSS slide*/
-.bpm {
-    display:inline-block;
-    width:50px;
-    }
-
-/*CSS del recuadro de resultados*/
-.devolucion {
-    background-color: rgb(20, 20, 20, 0.80);
-    font-family: 'Trebuchet MS' sans-serif;
-    width: 100%;
-    min-height: 300px;
-    max-height: 600px;
-    border: none;
-}
-
-/*CSS del recuadro de resultados y formulario en los breakpoints*/
-    @media only screen and (max-width: 600px) {
-    /*.devolucion { 
-            background-color: rgb(20,20,20); 
-             }*/
-    .item { 
-            flex-direction: column;
-            flex-wrap: wrap; 
-            align-self: center;
-            }
-        }
-
-    @media only screen and (min-width: 600px) {
-        /*.devolucion{ 
-            background-color: rgb(20,20,20); 
-             }*/
-    .item { 
-            flex-direction: column;
-            flex-wrap: wrap; 
-            align-self: center;
-            }
-        }
-    
-    @media only screen and (min-width: 1024px) {
-        /*.devolucion{ 
-        background-color: rgb(20,20,20); 
-         }*/
-    .item { 
-            flex-direction: row;
-            flex-wrap: wrap; 
-            align-self: center;
-            }
-        }
-
-/*CSS del footer*/
-
-footer {
-    margin-top: 10px;
-    bottom: 0;
+.item {
+    justify-content: center;
+    text-align: center;
     font-size: 25px;
+    margin-top: 10px;
 }
-footer a i{ 
+
+input,
+textarea {
+    opacity: 0.75;
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+#botonSub:hover {
+    box-shadow: 0 10px 20px 0 rgb(79, 64, 102);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* CSS del Footer */
+footer {
+    padding-top: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+
+footer a i {
     padding-top: 5px;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     color: white;
     text-decoration: none;
     margin: 10px;
