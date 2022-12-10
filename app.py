@@ -12,12 +12,6 @@ app.config['MYSQL_DATABASE_BD'] = 'tpo'
 mysql.init_app(app)
 @app.route('/')
 def index():
-    '''    sql = ''
-    conn = mysql.connect()
-    cursor = conn.cursor()
-    cursor.execute(sql)
-    conn.commit()
-'''    
     return render_template('index.html')
 
 
