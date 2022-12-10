@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan">
-    <link rel="stylesheet" href="CSS/formularios.css">
-    <script src="JS/samples.js"></script>
+    <link rel="stylesheet" href="/CSS/formularios.css">
+    <script src="/JS/samples.js"></script>
     <script src="https://kit.fontawesome.com/90e1d5d566.js" crossorigin="anonymous"></script>
     <title>Formulario de samples</title>
 </head>
@@ -36,10 +36,10 @@
                         <label for="genero">Género:</label>
                         <select name="genero" id="genero" class="opciones">
                             <option value="" selected>Todos</option>
-                            <option value="rock">Rock</option>
-                            <option value="pop">Pop</option>
-                            <option value="blues">Blues</option>
-                            <option value="fx">FX</option>
+                            {% for genero in generos %}
+                            <option value="{{genero[0]}}">{{genero[1]}}</option>
+                            {% endfor %}
+                            
                         </select>
                     </div>
 
@@ -47,11 +47,9 @@
                         <label for="instrumento">Instrumento:</label>
                         <select name="instrumento" id="instrumento" class="opciones">
                             <option value="" selected>Todos</option>
-                            <option value="guitarra">Guitarra</option>
-                            <option value="bateria">Batería</option>
-                            <option value="bajo">Bajo</option>
-                            <option value="fx">FX</option>
-                            <option value="otros">Otros</option>
+                            {% for instrumento in instrumentos %}
+                            <option value="{{instrumento[0]}}">{{instrumento[1]}}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
