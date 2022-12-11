@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan">
     <link rel="stylesheet" href="/CSS/formularios.css">
+    <!--<link rel="stylesheet" href="/CSS/resultado.css">-->
     <script src="/JS/samples.js"></script>
     <script src="https://kit.fontawesome.com/90e1d5d566.js" crossorigin="anonymous"></script>
     <title>Formulario de samples</title>
@@ -18,15 +19,15 @@
                     alt="Logo de sample.ar"></a></div>
         <nav class="header-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="samples.html">Samples</a></li>
-                <li><a href="partituras.html">Partituras</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/samples">Samples</a></li>
+                <li><a href="/partituras">Partituras</a></li>
+                <li><a href="/contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <div>
-        <form class="busqueda">
+        <form class="busqueda" method="get" action="/find-samples">
             <!--Formulario de búsqueda-->
             <h3 class="form-titulo">Buscador de samples</h3>
             <fieldset>
@@ -55,7 +56,7 @@
 
                     <div class="item">
                         <label for="bpm">BPM</label>
-                        <input type="range" min="30" max="300" value="120" class="slider" id="bpm">
+                        <input type="range" min="30" max="300" value="120" class="slider" id="bpm" name="bpm">
                         <span id="bpm-val" class="bpm"></span>
                         <div>
                             <label for="todos">Todos</label>
@@ -63,14 +64,41 @@
                         </div>
                     </div>
 
-                    <input type="button" value="Buscar" onclick="buscarSample()">
+                    <input type="submit" value="Buscar">
                 </div>
 
             </fieldset>
         </form>
 
         <!--Recuadro de resultados-->
-        <iframe class="devolucion" id="resultados" src=""></iframe>
+        <div class="devolucion" id="resultados" src="">
+            <div class="container">
+            <!-- Flex container -->
+            {% if resultado_samples is defined %} 
+               
+                {% for resultado in resultado_samples %}
+                    <div class="item-sam">
+                        <audio controls>
+                            <source src="SAM/{{resultado[2]}}" type="audio/wav">
+                        </audio>
+                        <div class="card">
+                        <h4>{{resultado[1]}}</h4>
+                        <p>{{resultado[0]}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% if resultado_samples |length ==0 %}
+                    <div class="msj-error">
+                        <h1>No hay resultados para esta búsqueda.</h1>
+                        <img src="IMG/search.png" class="lupa">
+                    </div>
+                {% endif %}
+
+            {% else %}
+            {% endif %}
+            </div>
+        </div>
+        
     </div>
 </body>
 
